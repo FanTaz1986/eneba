@@ -43,13 +43,13 @@ Write-Host "[OK] Changes committed" -ForegroundColor Green
 
 # Push to remote
 Write-Host "[PUSH] Pushing to remote repository..." -ForegroundColor Cyan
-git push -u origin main 2>&1
+git push -u origin master 2>&1
 if ($LASTEXITCODE -eq 0) {
     Write-Host "[OK] Successfully pushed to git!" -ForegroundColor Green
     Write-Host "[INFO] Your .env file is included in the push (allowed by .gitignore)" -ForegroundColor Green
 } else {
     Write-Host "[WARN] Push encountered an issue. Check your git remote and branch setup." -ForegroundColor Yellow
-    Write-Host "[HINT] Try: git push origin main" -ForegroundColor Yellow
+    Write-Host "[HINT] Try: git push origin master" -ForegroundColor Yellow
 }
 
 Write-Host "[DONE] Complete!" -ForegroundColor Green
